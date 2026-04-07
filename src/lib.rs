@@ -13,6 +13,7 @@ where
 }
 
 mod bubblesort;
+mod insertionsort;
 
 #[cfg(test)]
 mod tests {
@@ -32,7 +33,7 @@ mod tests {
     #[test]
     fn std_works() {
         let mut things = vec![4, 2, 3, 1];
-        sort::<_, StdSorter>(&mut things);
+        StdSorter::sort(&mut things);
         assert_eq!(things, &[1, 2, 3, 4]);
     }
 }

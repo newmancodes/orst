@@ -1,8 +1,8 @@
 use super::Sorter;
 
-pub struct Bubblesort;
+pub struct BubbleSort;
 
-impl Sorter for Bubblesort {
+impl Sorter for BubbleSort {
     fn sort<T>(slice: &mut [T])
     where
         T: Ord,
@@ -21,8 +21,8 @@ impl Sorter for Bubblesort {
 }
 
 #[test]
-fn bubblesort_works() {
-    let mut nums = vec![4, 2, 7, 1, 9];
-    super::sort::<_, Bubblesort>(&mut nums);
-    assert_eq!(nums, vec![1, 2, 4, 7, 9]);
+fn it_works() {
+    let mut things = vec![4, 2, 7, 1, 9];
+    BubbleSort::sort(&mut things);
+    assert_eq!(things, vec![1, 2, 4, 7, 9]);
 }
